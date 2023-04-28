@@ -37,7 +37,7 @@
         margin: 0 auto;
         font-family: 'Dancing Script', cursive;
         font-size: 3rem;
-        padding-right: 220px;
+        padding-right: 300px;
     }
 
     .nav-bar-icons{
@@ -63,9 +63,29 @@
             }
         }
 
-        #cart{
-            &:hover{
-                color: #08c822;
+        .shopping-cart{
+            position: relative;
+            display: inline-block;
+
+            #cart{
+                &:hover{
+                    color: #08c822;
+                }
+            }
+
+            #cart-count{
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                background-color: red;
+                color: white;
+                font-size: 12px;
+                font-weight: 700;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                padding-left: 6px;
             }
         }
     }
