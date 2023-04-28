@@ -1,0 +1,22 @@
+.footer{
+    .footer-container{
+        background: #000000;
+        color: white;
+        padding: 10px;
+
+        #copyright{
+            font-weight: 700;
+        }
+
+        #logo-footer{
+            display: flex;
+            justify-content: center;
+        }
+
+        #address{
+            display: flex;
+            justify-content: right;
+            text-align: right;
+        }
+    }
+}
