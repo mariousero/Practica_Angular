@@ -1,0 +1,7 @@
+<div class="card" *ngIf="card">
+    <div class="card-text">
+        <h2>{{card.getTitle()}}</h2>
+        <h5>Comprar -></h5>
+    </div>
+    <img [src]="card.getImagen()" alt="{{card.getTitle()}}">
+</div>

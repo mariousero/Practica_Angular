@@ -1,0 +1,23 @@
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+    }
+
+    p {
+        width: 200px;
+        text-align: center;
+        margin-top: 10px;
+    }
+}

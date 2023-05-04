@@ -1,0 +1,5 @@
+<div class="banner" *ngIf="banner">
+    <h2>{{banner.getSubtitle()}}</h2>
+    <h1>{{banner.getTitle()}}</h1>
+    <img [src]="banner.getImg()" class="d-block w-100" alt="{{banner.getTitle()}}">
+</div>

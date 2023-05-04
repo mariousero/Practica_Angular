@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { IBanner } from './banner.interface';
+import { IBanner } from '../banner.interface';
 
 @Injectable({
   providedIn: 'root'

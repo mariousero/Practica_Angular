@@ -1,0 +1,4 @@
+<div class="category" *ngIf="categoria">
+    <img [src]="categoria.getMainImg()" alt={{categoria.getName()}}>
+    <p>{{categoria.getName()}} ({{categoria.getCount()}})</p>
+</div>
