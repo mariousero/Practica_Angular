@@ -14,6 +14,7 @@ import { CardCardComponent } from './home/card/card-card/card-card.component';
 import { BannerCardComponent } from './home/banner/banner-card/banner-card.component';
 import { CategoryComponent } from './home/category/category.component';
 import { CategoryCardComponent } from './home/category/category-card/category-card.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CategoryCardComponent } from './home/category/category-card/category-ca
     BannerCardComponent,
     CategoryComponent,
     CategoryCardComponent,
+    NosotrosComponent,
   ],
   imports: [
     BrowserModule,

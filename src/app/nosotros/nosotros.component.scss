@@ -1,0 +1,41 @@
+.articulos-container{
+    position: relative;
+    top: 50px + 120px;
+    margin: 50px;
+    margin-bottom: 200px;
+    min-height: 135vh;
+
+    article{
+        border-radius: 15px;
+        margin: 10px;
+        padding: 15px;
+        width: 50%;
+        height: 300px;
+        color: white;
+
+        h1{
+            text-align: center;
+        }
+
+        p{
+            font-weight: 400;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        
+        &:nth-child(2n+1){
+            float: left;
+            background: #000000;
+            background: -webkit-linear-gradient(to right, #434343, #000000);
+            background: linear-gradient(to right, #434343, #000000); 
+        }
+
+        &:nth-child(2n){
+            float: right;
+            background: #000000;
+            background: -webkit-linear-gradient(to left, #434343, #000000);
+            background: linear-gradient(to left, #434343, #000000); 
+        }
+    }
+}
