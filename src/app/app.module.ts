@@ -15,6 +15,7 @@ import { BannerCardComponent } from './home/banner/banner-card/banner-card.compo
 import { CategoryComponent } from './home/category/category.component';
 import { CategoryCardComponent } from './home/category/category-card/category-card.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { SubelementComponent } from './shared/navbar/subelement/subelement.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     CategoryComponent,
     CategoryCardComponent,
     NosotrosComponent,
+    SubelementComponent,
   ],
   imports: [
     BrowserModule,

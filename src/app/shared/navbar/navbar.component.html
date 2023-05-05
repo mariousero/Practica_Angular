@@ -17,13 +17,22 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="#">Hombres</a>
+                            <a class="dropdown-item">Hombres</a>
+                            <ul>
+                                <app-subelement *ngFor="let categoria of categoriasHombres" [categoria]="categoria"></app-subelement>
+                            </ul>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#">Mujeres</a>
+                            <ul>
+                                <app-subelement *ngFor="let categoria of categoriasMujeres" [categoria]="categoria"></app-subelement>
+                            </ul>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#">Kids</a>
+                            <ul>
+                                <app-subelement *ngFor="let categoria of categoriasKids" [categoria]="categoria"></app-subelement>
+                            </ul>
                         </li>
                     </ul>
                 </li>
