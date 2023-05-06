@@ -56,13 +56,35 @@
                         background-color: #fff;
                         border: solid 1px rgb(171, 169, 169);
                         border-radius: 10px;
-                        min-width: 200px;
+                        min-width: 170px;
                         min-height: 150px;
                         padding: 10px;
                         font-weight: 400;
-                        right: -200px;
+                        right: -170px;
                         top: 0px;
                         list-style: none;
+
+                        li{
+                            width: 100%;
+                            margin: 5px;
+                        
+                            &:hover{
+                                font-weight: 700;
+                            }
+                        
+                            a{
+                                color: black;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    .dropdown-mujeres{
+                        top: 32px;
+                    }
+
+                    .dropdown-kids{
+                        top: 64px;
                     }
                 }
             }
