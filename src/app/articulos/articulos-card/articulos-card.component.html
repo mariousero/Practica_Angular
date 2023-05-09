@@ -1,0 +1,18 @@
+<div class="card" style="width: 18rem;" *ngIf="articulo">
+    <a [routerLink]="['/articulo-ficha', articulo.getId()]">
+        <img [src]="articulo.getImg()" class="card-img-top" alt="{{articulo.getDescripcion()}}">
+        <div class="card-body">
+            <p class="card-title">{{articulo.getDescripcion()}}</p>
+            <div class="card-text">
+                <span *ngIf="!articulo.isDescuento()">{{ articulo.getPrecio() | number:'1.0-2':'es-ES' }}€</span>
+                <div *ngIf="articulo.isDescuento()">
+                    <span class="precioAntiguo">{{ articulo.getPrecio() | number:'1.0-2':'es-ES' }}€</span>
+                    <span class="precioNuevo">{{ articulo.getPrecioDescuento() | number:'1.0-2':'es-ES' }}€</span>
+                    <span class="descuento">-{{calcularDescuento(articulo.getPrecio(), articulo.getPrecioDescuento())}}%</span>
+                </div>
+            </div>
+            <fa-icon class="icono" [icon]="faHeart" *ngIf="!articulo.isFavorito()"></fa-icon>
+            <fa-icon class="icono fav" [icon]="faHeartSolid" *ngIf="articulo.isFavorito()"></fa-icon>
+        </div>
+    </a>
+</div>

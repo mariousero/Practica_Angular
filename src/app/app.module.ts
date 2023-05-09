@@ -15,6 +15,9 @@ import { BannerCardComponent } from './home/banner/banner-card/banner-card.compo
 import { CategoryComponent } from './home/category/category.component';
 import { CategoryCardComponent } from './home/category/category-card/category-card.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { ArticulosComponent } from './articulos/articulos.component';
+import { ArticulosCardComponent } from './articulos/articulos-card/articulos-card.component';
+import { ArticuloFormComponent } from './articulos/articulo-form/articulo-form.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     CategoryComponent,
     CategoryCardComponent,
     NosotrosComponent,
+    ArticulosComponent,
+    ArticulosCardComponent,
+    ArticuloFormComponent
   ],
   imports: [
     BrowserModule,

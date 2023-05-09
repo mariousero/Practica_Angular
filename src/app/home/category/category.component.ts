@@ -27,7 +27,8 @@ export class CategoryComponent implements OnInit{
     this.categoryService.obtenerCategoriasHombre().subscribe (
       (data) => {
         data.forEach( (category) => {
-          const categoryNueva: Category = new Category(category.id, category.name, category.count, category.mainImg);
+          console.log(category);
+          const categoryNueva: Category = new Category(category.id, category.name, category.genero, category.count, category.mainImg);
           this.categoriasHombres.push(categoryNueva);
         })
       }
@@ -38,7 +39,7 @@ export class CategoryComponent implements OnInit{
     this.categoryService.obtenerCategoriasMujer().subscribe (
       (data) => {
         data.forEach( (category) => {
-          const categoryNueva: Category = new Category(category.id, category.name, category.count, category.mainImg);
+          const categoryNueva: Category = new Category(category.id, category.name, category.genero, category.count, category.mainImg);
           this.categoriasMujeres.push(categoryNueva);
         })
       }
@@ -49,7 +50,7 @@ export class CategoryComponent implements OnInit{
     this.categoryService.obtenerCategoriasKids().subscribe (
       (data) => {
         data.forEach( (category) => {
-          const categoryNueva: Category = new Category(category.id, category.name, category.count, category.mainImg);
+          const categoryNueva: Category = new Category(category.id, category.name, category.genero, category.count, category.mainImg);
           this.categoriasKids.push(categoryNueva);
         })
       }

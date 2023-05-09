@@ -1,4 +1,6 @@
 <div class="category" *ngIf="categoria">
-    <img [src]="categoria.getMainImg()" alt={{categoria.getName()}}>
-    <p>{{categoria.getName()}} ({{categoria.getCount()}})</p>
+    <a [routerLink]="['articulos', categoria.getGenero()]">
+        <img [src]="categoria.getMainImg()" alt={{categoria.getName()}}>
+        <p>{{categoria.getName()}} ({{categoria.getCount()}})</p>
+    </a>
 </div>

@@ -1,0 +1,253 @@
+body{
+    position: relative;
+    margin-top: 120px + 50px + 20px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+    .form-articulo{
+        position: relative;
+        display: flex;
+        margin-top: 100px;
+        margin-left: 15%;
+
+        .img-articulo{
+            position: relative;
+            max-height: 576px;
+            max-width: 384px;
+
+            img{
+                width: 100%;
+            }
+
+            span{
+                position: absolute;
+                top: 20px;
+                right: 0px;
+                font-size: 0.9rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                background-color: rgb(174, 172, 172);
+                width: 130px;
+                height: 23px;
+                font-weight: 600;
+            }
+        }
+        .texto-articulo{
+            position: relative;
+            margin-left: 100px;
+
+            .categoria-reviews{
+                display: flex;
+
+                .categoria{
+                    font-size: 1.1rem;
+                    color: rgb(104, 104, 104);
+                }
+
+                .reviews{
+                    margin-left: 300px;
+                    color: rgba(174, 172, 172, 0.8);
+
+                    span{
+                        color: black;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .descripcion{
+                font-weight: 700;
+                font-size: 2rem;
+            }
+
+            .precio{
+                color: rgb(104, 104, 104);
+                font-weight: 600;
+                font-size: 1.4rem;
+
+                span{
+                    font-size: 1rem;
+                    margin-left: 10px;
+                    font-weight: 500;
+                }
+            }
+
+            .precioNuevo{
+                font-weight: 600;
+                font-size: 1.4rem;
+                color: rgb(255, 0, 0);
+            }
+
+            .precioAntiguo{
+                color: rgb(104, 104, 104);
+
+                .originalPrecio{
+                    text-decoration: line-through;
+                }
+
+                .descuento{
+                    margin-left: 10px;
+                    color: rgb(234, 53, 53);
+                }
+            }
+
+            .miniatura{
+                position: relative;
+                max-height: 144px;
+                max-width: 96px;
+
+                img{
+                    width: 100%;
+                    border-bottom: solid 2px black;
+                }
+            }
+
+            .tallas-text{
+                margin-top: 35px;
+            }
+
+            .tallas-articulo{
+                display: flex;
+
+                .talla{
+                    margin-right: 20px;
+                    width: 50px;
+                    height: 50px;
+
+                    &.disponible{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgba(221, 221, 221, 0.7);
+                        border: solid 1px rgb(174, 172, 172);
+
+                        &:hover{
+                            transform: scale(1.1);
+                            opacity: 0.8;
+                        }
+                    }
+
+                    &.no-disponible{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgba(221, 221, 221, 0.5);
+                        border: solid 1px rgb(174, 172, 172);
+                        color: rgb(104, 104, 104);
+                        text-decoration: line-through;
+                    }
+                }
+            }
+            
+            .indiceTallas{
+                display: flex;
+                margin-top: 15px;
+
+                fa-icon{
+                    font-size: 1.1rem;
+                }
+
+                span{
+                    margin-left: 10px;
+                    text-decoration: underline;
+                }
+            }
+
+            .botonera{
+                margin-top: 25px;
+                display: flex;
+
+                button{
+                    width: 200px;
+                    height: 70px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.1rem;
+                }
+
+                .wait-list{
+                    background-color: black;
+                    color: white;
+                    margin-right: 30px;
+
+                    span{
+                        margin-left: 15px;
+                        font-weight: 600;
+                    }
+                }
+
+                .wishlist{
+
+                    span{
+                        font-weight: 600;
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+            .texto-soldOut{
+                margin-top: 15px;
+                color: rgb(104, 104, 104);
+                font-size: 0.9rem;
+
+                span{
+                    margin-left: 10px;
+                    text-decoration: underline;
+                    color: black;
+                }
+            }
+
+            .redes{
+                margin-top: 35px;
+                display: flex;
+                align-items: center;
+
+                span{
+                    font-weight: 600;
+                }
+
+                fa-icon{
+                    margin-left: 15px;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    background-color: rgb(232, 231, 231);
+                    color: rgb(149, 149, 149);
+                }
+
+                .twitter{
+                    margin-left: 20px;
+
+                    &:hover{
+                        color: #1d9bf0;
+                        background-color: white;
+                        transform: scale(1.2);
+                    }
+                }
+
+                .facebook{
+                    &:hover{
+                        color: #0037c1;
+                        background-color: white;
+                        transform: scale(1.2);
+                    }
+                }
+
+                .pinterest{
+                    &:hover{
+                        color: #ca2126;
+                        background-color: white;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}

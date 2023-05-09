@@ -1,0 +1,8 @@
+<body>
+    <h1>Sección de {{categoria}}</h1>
+    <div class="cards">
+        <div *ngFor="let articulo of articulos">
+            <app-articulos-card *ngIf="articulo.getCategoria() === categoria" [articulo]="articulo"></app-articulos-card>
+        </div>
+    </div>
+</body>

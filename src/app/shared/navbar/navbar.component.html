@@ -17,26 +17,26 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item">Hombres</a>
+                            <a class="dropdown-item" [routerLink]="['articulos', 'Hombre']">Hombres</a>
                             <ul class="dropdown-hombres">
                                 <li *ngFor="let categoria of categoriasHombres">
-                                    <a href="">{{categoria.getName()}}</a>
+                                    <a [routerLink]="['articulos', 'Hombre']">{{categoria.getName()}}</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">Mujeres</a>
+                            <a class="dropdown-item" [routerLink]="['articulos', 'Mujer']">Mujeres</a>
                             <ul class="dropdown-mujeres">
                                 <li *ngFor="let categoria of categoriasMujeres">
-                                    <a href="">{{categoria.getName()}}</a>
+                                    <a [routerLink]="['articulos', 'Mujer']">{{categoria.getName()}}</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">Kids</a>
+                            <a class="dropdown-item" [routerLink]="['articulos', 'Kids']">Kids</a>
                             <ul class="dropdown-kids">
                                 <li *ngFor="let categoria of categoriasKids">
-                                    <a href="">{{categoria.getName()}}</a>
+                                    <a [routerLink]="['articulos', 'Kids']">{{categoria.getName()}}</a>
                                 </li>
                             </ul>
                         </li>

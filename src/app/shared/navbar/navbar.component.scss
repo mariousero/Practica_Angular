@@ -104,33 +104,23 @@
         gap: 30px;
         font-size: 1.2rem;
 
-        #search{
+        fa-icon{
             &:hover{
-                color: rgb(24, 24, 248);
+                font-weight: 900;
+                transform: scale(1.1);
             }
         }
 
-        #user{
-            &:hover{
-                color: aquamarine;
-            }
-        }
-
-        #like{
-            &:hover{
-                color: red;
-            }
-        }
 
         .shopping-cart{
             position: relative;
             display: inline-block;
 
-            #cart{
-                &:hover{
-                    color: #08c822;
-                }
+            &:hover{
+                font-weight: 900;
+                transform: scale(1.1);
             }
+            
 
             #cart-count{
                 position: absolute;

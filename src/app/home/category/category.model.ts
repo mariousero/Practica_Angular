@@ -1,6 +1,7 @@
 export class Category{
     private id: number;
     private name: string;
+    private genero: string;
     private count: number;
     private mainImg: string;
 
@@ -18,6 +19,14 @@ export class Category{
 
     public setName(name: string): void {
         this.name = name;
+    }
+
+    public getGenero(): string {
+        return this.genero;
+    }
+
+    public setGenero(genero: string): void {
+        this.genero = genero;
     }
 
     public getCount(): number {
@@ -39,13 +48,15 @@ export class Category{
     constructor(
         id: number, 
         name: string, 
+        genero: string,
         count: number, 
         mainImg: string
     ) {
-        this.id = id
-        this.name = name
-        this.count = count
-        this.mainImg = mainImg
+        this.id = id;
+        this.name = name;
+        this.genero = genero;
+        this.count = count;
+        this.mainImg = mainImg;
     }
 
 }

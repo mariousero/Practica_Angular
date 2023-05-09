@@ -1,0 +1,69 @@
+<body *ngIf="articulo">
+    <div class="form-articulo">
+        <div class="img-articulo">
+            <img [src]="articulo.getImg()" alt="{{articulo.getDescripcion()}}">
+            <span *ngIf="articulo.getStock() < 1">OUT OF STOCK</span>
+        </div>
+        <div class="texto-articulo">
+            <div class="categoria-reviews">
+                <p class="categoria">{{articulo.getCategoria()}}</p>
+                <div class="reviews">
+                    <fa-icon [icon]="faStar"></fa-icon>
+                    <fa-icon [icon]="faStar"></fa-icon>
+                    <fa-icon [icon]="faStar"></fa-icon>
+                    <fa-icon [icon]="faStar"></fa-icon>
+                    <fa-icon [icon]="faStar"></fa-icon>
+                    <span>Reviews (0)</span>
+                </div>
+            </div>
+            <p class="descripcion">{{articulo.getDescripcion()}}</p>
+            <p class="precio" *ngIf="!articulo.isDescuento()">{{ articulo.getPrecio() | number:'1.0-2':'es-ES' }}€    <span *ngIf="articulo.getStock() < 1">(Out of Stock)</span></p>
+            
+            <p class="precioNuevo" *ngIf="articulo.isDescuento()">{{ articulo.getPrecioDescuento() | number:'1.0-2':'es-ES' }}€</p>
+            <p class="precioAntiguo" *ngIf="articulo.isDescuento()">
+                Original: 
+                <span class="originalPrecio">{{ articulo.getPrecio() | number:'1.0-2':'es-ES' }}€  </span>
+                <span class="descuento">-{{calcularDescuento(articulo.getPrecio(), articulo.getPrecioDescuento())}}%</span>
+            </p>
+            <p class="color">Color: <strong>{{articulo.getColor()}}</strong></p>
+            <div class="miniatura">
+                <img [src]="articulo.getImg()" alt="{{articulo.getDescripcion()}}">
+            </div>
+            <p class="tallas-text">Talla: <strong>Seleccione su talla</strong></p>
+            <div class="tallas-articulo">
+                <div class="talla" *ngFor="let talla of articulo.getTallas()">
+                    <div class="talla disponible" *ngIf="stringToInt(talla[1]) > 0">
+                        <p>{{talla[0]}}</p>
+                    </div>
+                    <div class="talla no-disponible" *ngIf="stringToInt(talla[1]) <= 0">
+                        <p>{{talla[0]}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="indiceTallas">
+                <fa-icon [icon]="faRuler"></fa-icon>
+                <span>Indice de tallas</span>
+            </div>
+            <div class="botonera">
+                <button class="wait-list">
+                    <fa-icon [icon]="faEnvelope"></fa-icon>
+                    <span>Wait List</span>
+                </button>
+                <button class="wishlist">
+                    <span>Wishlist</span>
+                    <fa-icon [icon]="faHeart"></fa-icon>
+                </button>
+            </div>
+            <p class="texto-soldOut">
+                ¿Tu talla está agotada? 
+                <span>¡Únete a la lista de espera para ser notificado en cuanto vuelva a haber stock!</span>
+            </p>
+            <div class="redes">
+                <span>Compartir: </span>
+                <fa-icon class="twitter" [icon]="faTwitter"></fa-icon>
+                <fa-icon class="facebook" [icon]="faFacebook"></fa-icon>
+                <fa-icon class="pinterest" [icon]="faPinterest"></fa-icon>
+            </div>
+        </div>
+    </div>
+</body>
